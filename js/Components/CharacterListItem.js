@@ -24,7 +24,7 @@ class CharacterListItem extends Component {
     };
 
     componentWillUpdate(nextProps) {
-        if (nextProps.isExpanded) {
+        if (nextProps.isExpanded && !this.props.isExpanded) {
             this.getCharacter(this.props.character.id);
         }
     }

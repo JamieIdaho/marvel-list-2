@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import 'whatwg-fetch'
 import CryptoJS from 'crypto-js';
 import '../../scss/style.scss';
-
 import CharacterListItem from './CharacterListItem';
-
 import config from '../config';
 
 let ts = new Date().getTime();

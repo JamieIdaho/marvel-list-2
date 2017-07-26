@@ -30266,7 +30266,7 @@ var CharacterListItem = function (_Component) {
     _createClass(CharacterListItem, [{
         key: 'componentWillUpdate',
         value: function componentWillUpdate(nextProps) {
-            if (nextProps.isExpanded) {
+            if (nextProps.isExpanded && !this.props.isExpanded) {
                 this.getCharacter(this.props.character.id);
             }
         }
