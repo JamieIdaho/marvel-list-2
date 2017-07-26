@@ -1,0 +1,65 @@
+.marvel-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+
+  ul.marvel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+
+    li.marvel-character {
+      display: flex;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 0 5px 1px lightgrey;
+      overflow: hidden;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &.expanded {
+        height: 450px;
+      }
+
+      .character-image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      .character-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+
+        .character-name {
+          font-weight: bold;
+          font-size: 20px;
+          text-transform: uppercase;
+          margin: 15px 0;
+        }
+
+        .character-details {
+          margin-top: 15px;
+
+          span {
+            color: #B43322;
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution-text a {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
