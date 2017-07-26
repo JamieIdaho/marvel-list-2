@@ -17455,7 +17455,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = {
-    marvelEndPoint: 'http://gateway.marvel.com/v1/public/characters',
+    marvelEndPoint: 'https://gateway.marvel.com/v1/public/characters',
     privateKey: '6d87e2d611560d4e27ea4faf54e2547bcced5ff1',
     publicKey: 'd54d5ead523fd3131f28c881265f4cf6'
 };
@@ -30275,7 +30275,7 @@ var CharacterListItem = function (_Component) {
         value: function getCharacter(characterId) {
             var _this2 = this;
 
-            fetch('http://gateway.marvel.com/v1/public/characters/' + characterId + '?ts=' + ts + '&apikey=' + _config2.default.publicKey + '&hash=' + hash).then(function (response) {
+            fetch('https://gateway.marvel.com/v1/public/characters/' + characterId + '?ts=' + ts + '&apikey=' + _config2.default.publicKey + '&hash=' + hash).then(function (response) {
                 return response.json();
             }).then(function (json) {
                 _this2.setState({

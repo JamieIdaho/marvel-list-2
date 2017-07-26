@@ -30,7 +30,7 @@ class CharacterListItem extends Component {
     }
 
     getCharacter(characterId) {
-        fetch(`http://gateway.marvel.com/v1/public/characters/` + characterId + '?ts=' + ts + '&apikey=' + config.publicKey + '&hash=' + hash)
+        fetch(`https://gateway.marvel.com/v1/public/characters/` + characterId + '?ts=' + ts + '&apikey=' + config.publicKey + '&hash=' + hash)
             .then(function (response) {
                 return response.json()
             })
