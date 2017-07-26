@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JamieIdaho/marvel-list"
+    "url": "https://github.com/JamieIdaho/marvel-list-2"
   },
   "author": "Jamie Knight",
   "license": "",
-  "homepage": "https://github.com/JamieIdaho/marvel-list",
+  "homepage": "https://github.com/JamieIdaho/marvel-list-2",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.25.0",
