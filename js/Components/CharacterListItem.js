@@ -55,7 +55,6 @@ class CharacterListItem extends Component {
 
                 <div className="character-info">
                     <div className="character-name">{character.name}</div>
-                    <div className="character-description">{ character.description }</div>
                     {characterData && (
                         <CharacterExpandedDetails character={character} details={characterData}/>
                     )}

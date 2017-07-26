@@ -7,7 +7,7 @@ import config from '../config';
 
 let ts = new Date().getTime();
 let hash = CryptoJS.MD5(ts + config.privateKey + config.publicKey).toString();
-let marvelUrl = config.marvelEndPoint + '?ts=' + ts + '&apikey=' + config.publicKey + '&hash=' + hash + '&limit=5';
+let marvelUrl = config.marvelEndPoint + '?ts=' + ts + '&apikey=' + config.publicKey + '&hash=' + hash + '&limit=100';
 
 class MarvelCharacterList extends Component {
 

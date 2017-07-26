@@ -29521,7 +29521,7 @@ exports = module.exports = __webpack_require__(223)(undefined);
 
 
 // module
-exports.push([module.i, ".marvel-list-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: 30px; }\n  .marvel-list-container ul.marvel-list {\n    list-style: none;\n    padding: 0;\n    margin: 0 5%;\n    display: flex;\n    flex-direction: column; }\n    .marvel-list-container ul.marvel-list li.marvel-character {\n      display: flex;\n      margin-bottom: 15px;\n      border-radius: 5px;\n      padding: 15px;\n      box-shadow: 0 0 5px 1px lightgrey;\n      overflow: hidden;\n      transition: all 0.3s; }\n      .marvel-list-container ul.marvel-list li.marvel-character:hover {\n        transform: scale(1.02); }\n      .marvel-list-container ul.marvel-list li.marvel-character.expanded {\n        height: 450px; }\n      .marvel-list-container ul.marvel-list li.marvel-character .character-image img {\n        width: 200px;\n        height: 200px;\n        border-radius: 50%; }\n      .marvel-list-container ul.marvel-list li.marvel-character .character-info {\n        display: flex;\n        flex-direction: column;\n        margin: 0 15px; }\n        .marvel-list-container ul.marvel-list li.marvel-character .character-info .character-name {\n          font-weight: bold;\n          font-size: 20px;\n          text-transform: uppercase;\n          margin: 15px 0; }\n        .marvel-list-container ul.marvel-list li.marvel-character .character-info .character-details {\n          margin-top: 15px; }\n          .marvel-list-container ul.marvel-list li.marvel-character .character-info .character-details span {\n            color: #B43322;\n            margin-left: 2px; }\n  .marvel-list-container .attribution-text a {\n    font-weight: bold;\n    font-size: 1rem; }\n", ""]);
+exports.push([module.i, ".marvel-list-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: 30px; }\n  .marvel-list-container ul.marvel-list {\n    list-style: none;\n    padding: 0;\n    margin: 0 5%;\n    display: flex;\n    flex-direction: column; }\n    .marvel-list-container ul.marvel-list li.marvel-character {\n      display: flex;\n      margin-bottom: 15px;\n      border-radius: 5px;\n      padding: 15px;\n      box-shadow: 0 0 5px 1px lightgrey;\n      overflow: hidden;\n      transition: all 0.3s;\n      width: 800px;\n      cursor: pointer; }\n      .marvel-list-container ul.marvel-list li.marvel-character:hover {\n        transform: scale(1.02); }\n      .marvel-list-container ul.marvel-list li.marvel-character.expanded {\n        height: 200px; }\n        .marvel-list-container ul.marvel-list li.marvel-character.expanded .character-info {\n          justify-content: space-between; }\n      .marvel-list-container ul.marvel-list li.marvel-character .character-image img {\n        width: 100px;\n        height: 100px;\n        border-radius: 50%; }\n      .marvel-list-container ul.marvel-list li.marvel-character .character-info {\n        display: flex;\n        flex-direction: column;\n        margin: 0 15px; }\n        .marvel-list-container ul.marvel-list li.marvel-character .character-info .character-name {\n          font-weight: bold;\n          font-size: 20px;\n          text-transform: uppercase;\n          margin: 15px 0; }\n        .marvel-list-container ul.marvel-list li.marvel-character .character-info .character-details {\n          margin-top: 15px; }\n          .marvel-list-container ul.marvel-list li.marvel-character .character-info .character-details span {\n            color: #B43322;\n            margin-left: 2px; }\n  .marvel-list-container .attribution-text a {\n    font-weight: bold;\n    font-size: 1rem; }\n", ""]);
 
 // exports
 
@@ -30105,7 +30105,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var ts = new Date().getTime();
 var hash = _cryptoJs2.default.MD5(ts + _config2.default.privateKey + _config2.default.publicKey).toString();
-var marvelUrl = _config2.default.marvelEndPoint + '?ts=' + ts + '&apikey=' + _config2.default.publicKey + '&hash=' + hash + '&limit=5';
+var marvelUrl = _config2.default.marvelEndPoint + '?ts=' + ts + '&apikey=' + _config2.default.publicKey + '&hash=' + hash + '&limit=100';
 
 var MarvelCharacterList = function (_Component) {
     _inherits(MarvelCharacterList, _Component);
@@ -30312,11 +30312,6 @@ var CharacterListItem = function (_Component) {
                         { className: 'character-name' },
                         character.name
                     ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'character-description' },
-                        character.description
-                    ),
                     characterData && _react2.default.createElement(_CharacterExpandedDetails2.default, { character: character, details: characterData })
                 )
             );
@@ -30478,8 +30473,8 @@ var CharacterExpandedDetails = function (_Component) {
                 { className: "character-expanded-content" },
                 _react2.default.createElement(
                     "div",
-                    null,
-                    JSON.stringify(characterData)
+                    { className: "character-description" },
+                    character.description
                 ),
                 _react2.default.createElement(
                     "div",

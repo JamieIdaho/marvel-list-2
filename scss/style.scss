@@ -19,18 +19,24 @@
       box-shadow: 0 0 5px 1px lightgrey;
       overflow: hidden;
       transition: all 0.3s;
+      width: 800px;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.02);
       }
 
       &.expanded {
-        height: 450px;
+        height: 200px;
+
+        .character-info {
+          justify-content: space-between;
+        }
       }
 
       .character-image img {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
       }
 

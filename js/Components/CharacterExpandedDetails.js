@@ -5,7 +5,7 @@ class CharacterExpandedDetails extends Component {
         const {character, characterData} = this.props;
         return (
             <div className="character-expanded-content">
-                <div>{JSON.stringify(characterData)}</div>
+                <div className="character-description">{ character.description }</div>
                 <div className="character-details">
                     <div>{ character.name } has appeared in <span>{ character.comics.available }</span> comics,
                         <span>{ character.series.available }</span> series,
